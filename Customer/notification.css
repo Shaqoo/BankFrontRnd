@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .wrapper {
+    display: flex;
+    height: 100vh;
+
+  }
+  
+  .sidebar {
+    width: 250px;
+    transition: opacity 0.3s ease;
+    background-color: #6a0dad; 
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+  }
+  .sidebar.collapsed {
+    width: 70px;
+  }
+  
+  .toggle-btn {
+    text-align: right;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .profile {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .brand{
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     justify-content: center;
+     margin-bottom: 20px;
+  }
+  .user-info{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-bottom: 30px;
+      padding-left: 10px;
+      font-size: 12px;
+  }
+  .logo
+  {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+  }
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .sidebar-text {
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .sidebar.collapsed .sidebar-text {
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: #8e44ad 0.3s;
+  }
+  
+  .menu a i {
+    width: 20px;
+    text-align: center;
+  }
+  
+  .menu a:hover {
+    background-color: #5a0ba0;
+    border-radius: 5px;
+  }
+  
+  .main-content {
+    background-color: #f9f9f9;
+    color: #333;
+    flex: 1;
+    padding:30px;
+  }
+  .notification-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .notification-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .notification-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .notification-item.unread {
+    font-weight: bold;
+    background-color: #fdf6ff;
+  }
+  
+  .notification-details {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 5px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .mark-all-btn {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .mark-all-btn:hover {
+    background-color:#5a0ba0;
+  }
+  

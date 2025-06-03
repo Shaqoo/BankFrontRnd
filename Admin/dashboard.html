@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+          <link rel="shortcut icon" href="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.35_c3be9d8a.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="dashboard.css">      
+</head>
+
+<body>
+     
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <h2 class="sidebar-text">Admin</h2>
+       <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span class="sidebar-text"> Dashboard</span></a>
+        <a href="Users.html"><i class="fas fa-users"></i><span class="sidebar-text"> Manage Users</span></a>
+        <a href="Bank.html"><i class="fas fa-building"></i><span class="sidebar-text"> Manage Banks</span></a>
+        <a href="AccountOfficer.html"><i class="fas fa-user-gear"></i><span class="sidebar-text"> Manage Bank
+                Officers</span></a>
+        <a href="transactions.html"><i class="fas fa-money-check-alt"></i><span class="sidebar-text"> Transactions</span></a>
+        <a href="Reports.html"><i class="fas fa-chart-line"></i><span class="sidebar-text"> Reports</span></a>
+        <a href="Settings.html"><i class="fas fa-cogs"></i><span class="sidebar-text"> Settings</span></a>
+        <a href="http://127.0.0.1:5500/SignIn.html"><i class="fas fa-sign-out-alt"></i><span class="sidebar-text">
+                Logout</span></a>
+    </div>
+
+     
+    <div id="main-content">
+        <div id="header">
+            <h1>Welcome, Admin!</h1>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title">Quick Stats</div>
+            <div class="card" id="totalUsers">
+                <!-- <i class="fas fa-users"></i>
+                <p>200 Users</p> -->
+            </div>
+            <div class="card" id="totalBanks">
+                <!-- <i class="fas fa-building"></i>
+                <p>10 Banks</p> -->
+            </div>
+            <div class="card" id="transactions">
+                <!-- <i class="fas fa-money-check-alt"></i>
+                <p>$1,000,000 Transactions</p> -->
+            </div>
+            <div class="card">
+                <i class="fas fa-chart-line"></i>
+                <p>Revenue: $500,000</p>
+            </div>
+            <div class="card" id="officers">
+                <!-- <i class="fas fa-user-gear"></i>
+                <p>Account Officers: $500,000</p> -->
+            </div>
+            <div class="card" id="loans">
+                <!-- <i class="fas fa-hand-holding-usd"></i>
+                <p>5 Pending Loans</p> -->
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title" id="recent"><h2>Recent Transactions</h2></div>
+            <!-- <p>Display recent transactions here...</p>
+            <p>m</p>
+            <p>m</p>
+            <p>m</p> -->
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title">System Health</div>
+            <p>System status and server health info...</p>
+        </div>
+    </div>
+
+     <script src="dashboard.js"></script>
+</body>
+
+</html>

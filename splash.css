@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #5a0ba0, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.logo, h1, p {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 100px;
+  animation-delay: 0.2s;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border: 4px solid white;
+}
+
+h1 {
+  color: white;
+  font-size: 28px;
+  animation-delay: 0.5s;
+  text-shadow: 1px 1px 4px #5a0ba0;
+}
+
+p {
+  color: white;
+  font-size: 18px;
+  animation-delay: 0.8s;
+  text-shadow: 1px 1px 4px #5a0ba0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity:1;
+}
+}

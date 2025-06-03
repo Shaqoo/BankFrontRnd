@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Users</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="shortcut icon" href="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.35_c3be9d8a.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="AccountOfficer.css">
+</head>
+
+<body>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <h2 class="sidebar-text">Admin</h2>
+     <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span class="sidebar-text"> Dashboard</span></a>
+        <a href="Users.html"><i class="fas fa-users"></i><span class="sidebar-text"> Manage Users</span></a>
+        <a href="Bank.html"><i class="fas fa-building"></i><span class="sidebar-text"> Manage Banks</span></a>
+        <a href="AccountOfficer.html"><i class="fas fa-user-gear"></i><span class="sidebar-text"> Manage Bank
+                Officers</span></a>
+        <a href="transactions.html"><i class="fas fa-money-check-alt"></i><span class="sidebar-text"> Transactions</span></a>
+        <a href="Reports.html"><i class="fas fa-chart-line"></i><span class="sidebar-text"> Reports</span></a>
+        <a href="Settings.html"><i class="fas fa-cogs"></i><span class="sidebar-text"> Settings</span></a>
+        <a href="http://127.0.0.1:5500/SignIn.html"><i class="fas fa-sign-out-alt"></i><span class="sidebar-text">
+                Logout</span></a>
+    </div>
+    <div id="main-content">
+        <h1>Manage Bank Officers</h1>
+
+        <div class="officer-summary">
+            <h3>Total Account Officers: <span id="officer-count">0</span></h3>
+            <button onclick="showAddOfficerForm()">Add Account Officer</button>
+        </div>
+
+        <div id="add-officer-form" style="display:none; margin-top:20px;">
+            <h3>Add Account Officer</h3>
+            <div class="form-group">
+                <label>Officer Full Name</label>
+                <input type="text" id="officer-name" placeholder="Officer Name" required/>
+            </div>
+            <div class="form-group">
+                <label>Officer Email</label>
+                <input type="email" id="officer-email" placeholder="Officer Email" required/>
+            </div>
+            <div class="form-group">
+                <label>User Name</label>
+                <input type="text" id="officer-u" placeholder="User Name" required/>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="text" id="officer-p" placeholder="Password" required/>
+            </div>
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="text" id="officer-cp" placeholder="Confirm Password" required/>
+            </div>
+            <div class="form-group">
+                <h4>Enter Your Gender</h4>
+                <select name="" id="gender">
+                    <option value="">Select A Gender</option>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h4>Enter Bank</h4>
+                <div class="custom-select">
+                    <div class="selected-option" onclick="toggleOptions()">
+                        <img src="default.jpg" alt="icon" />
+                        <span>Select Bank</span>
+                    </div>
+                    <div class="options" id="optionsList">
+
+                    </div>
+                </div>
+              <input type="hidden" name="profileType" id="selectedProfile" />
+              <br><br>
+                <button class="submit-btn" onclick="addOfficer()">Submit</button>
+            </div>
+        </div>
+        <div style="margin-top: 30px;">
+                <h3>Search Officer by Email</h3>
+                <input type="text" id="search-officer" oninput="searchOfficer()" placeholder="Enter officer email..." />
+                <div id="search-result" style="margin-top: 15px;"></div>
+            </div>
+
+         <div style="margin-top: 30px;">
+                <h1>AccountOfficers</h1>
+                 <ul id="Officers"></ul>
+            </div>
+    </div>
+    <script src="AccountOfficer.js"></script>
+</body>
+
+</html>

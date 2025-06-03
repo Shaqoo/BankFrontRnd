@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="shortcut icon" href="BankNestFavicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="Page4.css">
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+    <div id="container">
+        <form action="SignUp" method="post" id="signupbox4">
+            <img src="WhatsApp Image 2025-05-01 at 20.43.36_59ccea3c.jpg" alt="" class="logo">
+            <h4>Upload Your Profile Picture</h4>
+            <input type="file" name="" id="image" placeholder="Profile Image.....">
+
+            <h4>Enter Your AccountType</h4>
+            <select name="" id="accountTypes">
+                <option value="">Choose An AccountType</option>
+
+            </select>
+            <h4>Enter Your Transaction Pin</h4>
+            <input type="number" name="" id="pin" required placeholder="Pin.....">
+            <h4>Enter Your Bank</h4>
+            <div class="custom-select">
+                <div class="selected-option" onclick="toggleOptions()">
+                    <img src="default.jpg" alt="icon" />
+                    <span>Select Bank</span>
+                </div>
+                <div class="options" id="optionsList">
+
+                </div>
+            </div>
+
+
+            <input type="hidden" name="profileType" id="selectedProfile" />
+            <br><br>
+
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="Page4.js"></script>
+</body>
+
+</html>

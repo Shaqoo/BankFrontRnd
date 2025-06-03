@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Officer Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+     <link rel="shortcut icon" href="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.35_c3be9d8a.jpg"
+        type="image/x-icon">
+</head>
+
+<body>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <h2 class="sidebar-text">Account Officer</h2>
+        <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> <span class="sidebar-text">Dashboard</span></a>
+        <a href="account.html"><i class="fas fa-users"></i><span class="sidebar-text"> Manage Users</span></a>
+        <a href="transaction.html"><i class="fas fa-file-invoice-dollar"></i><span class="sidebar-text"> Transactions</span></a>
+        <a href="complaints.html"><i class="fas fa-comments"></i><span class="sidebar-text">Complaints</span></a>
+        <a href="loans.html"><i class="fas fa-chart-line"></i><span class="sidebar-text"> Loans</span></a>
+        <a href="settings.html"><i class="fas fa-cogs"></i><span class="sidebar-text">Settings</span></a>
+        <a href="http://127.0.0.1:5500/SignIn.html"><i class="fas fa-sign-out-alt"></i><span
+                class="sidebar-text">Logout</span></a>
+    </div>
+
+    <div id="main-content">
+        <div id="header">
+            <h1>Welcome, Account Officer!</h1>
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title">Quick Stats</div>
+            <div class="card users">
+                <i class="fas fa-users"></i>
+                <p id="total-users">Loading...</p>
+            </div>
+            <div class="card transactions">
+                <i class="fas fa-file-invoice-dollar"></i>
+                <p id="total-transactions">Loading...</p>
+            </div>
+            <div class="card complaints">
+                <i class="fas fa-comments"></i>
+                <p id="total-complaints">Loading...</p>
+            </div>
+            <div class="card revenue">
+                <i class="fas fa-chart-line"></i>
+                <p id="total-revenue">Loading...</p>
+            </div>
+            
+            <div class="card banks">
+                <i class="fas fa-building"></i>
+                <p id="total-banks">Loading...</p>
+            </div>
+            <div class="card loans">
+                <i class="fas fa-hand-holding-usd"></i>
+                <p id="pending-loans">Loading...</p>
+            </div>
+
+        </div>
+
+        <div class="dashboard-section">
+            <div class="section-title">Recent Complaints</div>
+            <p>Display recent complaints here...</p>
+        </div>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>

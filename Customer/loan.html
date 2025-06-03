@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help - BankNest</title>
+  <link rel="shortcut icon" href="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.35_c3be9d8a.jpg"
+    type="image/x-icon">
+  <link rel="stylesheet" href="loan.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="sidebar" id="sidebar">
+      <div class="toggle-btn" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="brand">
+        <img class="logo" src="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.36_59ccea3c.jpg" alt="">
+        <h3 class="sidebar-text">BankNest</h3>
+      </div>
+      <nav class="menu">
+        <a href="http://127.0.0.1:5500/Customer/dashboard.html"><i class="fas fa-home"></i><span class="sidebar-text">
+            Home</span></a>
+        <a href="http://127.0.0.1:5500/Customer/account.html"><i class="fas fa-university"></i><span
+            class="sidebar-text"> Accounts</span></a>
+        <a href="http://127.0.0.1:5500/Customer/transaction.html"><i class="fas fa-exchange-alt"></i><span
+            class="sidebar-text"> Transactions</span></a>
+        <a href="http://127.0.0.1:5500/Customer/loan.html"><i class="fas fa-hand-holding-usd"></i><span
+            class="sidebar-text"> Loans</span></a>
+        <a href="http://127.0.0.1:5500/Customer/moification.html"><i class="fas fa-bell"></i><span class="sidebar-text">
+            Notifications</span></a>
+        <a href="http://127.0.0.1:5500/Customer/complaint.html"><i class="fas fa-comment-dots"></i><span
+            class="sidebar-text"> Complaints</span></a>
+        <a href="http://127.0.0.1:5500/Customer/profile.html"><i class="fas fa-user-cog"></i><span class="sidebar-text">
+            Profile</span></a>
+        <a href="http://127.0.0.1:5500/Customer/help.html"><i class="fas fa-question-circle"></i><span
+            class="sidebar-text"> Help</span></a>
+        <a href="http://127.0.0.1:5500/SignIn.html"><i class="fas fa-sign-out-alt"></i><span class="sidebar-text">
+            Logout</span></a>
+      </nav>
+      <br>
+      <div class="user-info">
+
+      </div>
+    </div>
+
+    <div class="main-content">
+      <h2>Loan Services</h2>
+
+       
+      <section>
+        <h3>Loan Offers</h3>
+        <div id="loanOffers"></div>
+      </section>
+
+      
+      <section>
+        <h3>All My Loans</h3>
+        <button onclick="fetchAllLoans()">Refresh Loans</button>
+        <div id="loanList"></div>
+      </section>
+
+       
+      
+
+      
+      <section>
+        <h3>View Repayments</h3>
+        <form id="view-repay-form">
+          <button type="submit">View Repayments</button>
+        </form>
+        <div id="repaymentList"></div>
+      </section>
+
+
+    </div>
+    <script src="loan.js"></script>
+</body>
+
+</html>

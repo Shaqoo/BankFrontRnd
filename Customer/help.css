@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .wrapper {
+    display: flex;
+    height: 100vh;
+
+  }
+  
+  .sidebar {
+    width: 250px;
+    transition: opacity 0.3s ease;
+    background-color: #6a0dad; 
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+  }
+  .sidebar.collapsed {
+    width: 70px;
+  }
+  
+  .toggle-btn {
+    text-align: right;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .profile {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .brand{
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     justify-content: center;
+     margin-bottom: 20px;
+  }
+  .user-info{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      margin-bottom: 30px;
+      padding-left: 10px;
+      font-size: 12px;
+  }
+  .logo
+  {
+    width: 40px;
+    border-radius: 50%;
+    height: 40px;
+  }
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+  
+  .sidebar-text {
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .sidebar.collapsed .sidebar-text {
+    opacity: 0;
+    pointer-events: none;
+    width: 0;
+    overflow: hidden;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    transition: #8e44ad 0.3s;
+  }
+  
+  .menu a i {
+    width: 20px;
+    text-align: center;
+  }
+  
+  .menu a:hover {
+    background-color: #5a0ba0;
+    border-radius: 5px;
+  }
+  
+  .main-content {
+    background-color: #f9f9f9;
+    color: #333;
+    flex: 1;
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+  }
+   .main-content h1, h2{
+     color: #6a0dad;
+   }
+  
+  
+  .faq, .contact {
+    flex: 0 0 30%;
+    margin-top: 10px;
+  }
+  
+  .faq ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .faq li {
+    margin-bottom: 15px;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius:5px;
+  }
+  

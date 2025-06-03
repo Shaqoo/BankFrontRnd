@@ -1,0 +1,233 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #fff9f4;
+}
+
+#sidebar {
+    width: 250px;
+    background-color: #6a1b9a;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    position: fixed;
+}
+
+#sidebar h2 {
+    margin-bottom: 30px;
+}
+
+#sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#sidebar.collapsed {
+    width: 60px;
+}
+
+#sidebar.collapsed .sidebar-text {
+    display: none;
+}
+
+#sidebar a:hover {
+    background-color: #4a148c;
+}
+
+#sidebar a i {
+    margin-right: 10px;
+}
+
+#main-content {
+    margin-left: 270px;
+    padding: 30px;
+    width: calc(100% - 270px);
+}
+
+#sidebar.collapsed~#main-content {
+    margin-left: 90px;
+}
+.complaint-item {
+    background-color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+    transition: transform 0.2s, box-shadow 0.3s;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.complaint-item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(128, 0, 255, 0.6),
+                0 0 20px rgba(128, 0, 255, 0.4),
+                0 0 30px rgba(128, 0, 255, 0.3);
+}
+
+.complaint-item:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 8px rgba(128, 0, 255, 0.5);
+}
+
+
+#complaintsList{
+    color: #6a1b9a;
+    background-color: white;
+    padding: 10px;
+    height: 200px;
+    overflow-y: scroll;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+    
+}
+
+
+/* button {
+    background-color: #fbc02d;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+button i {
+    margin-right: 6px;
+    font-size: 14px;
+}
+
+
+button:hover {
+    background-color: #f57c00;
+    transform: translateY(-1px);
+}
+
+
+button:active {
+    background-color: #fbc02d;
+    transform: translateY(0);
+}
+
+.account {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.complaint {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#details {
+    margin-top: 20px;
+}
+
+#replyForm {
+    margin-top: 10px;
+    display: none;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+} */
+.chat-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    height: 400px;
+    overflow-y: scroll;
+
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: white;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    background-repeat: repeat;
+}
+
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 40%;
+    position: relative;
+}
+
+.message.left {
+    background-color: #eee;
+    align-self: flex-start;
+}
+
+.message.right {
+    background-color: #cfe9ff;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.message .time {
+    font-size: 0.75em;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+
+.message .status {
+    font-size: 0.75em;
+    float: right;
+    color: green;
+}
+
+#chatInput {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+}
+
+#chatForm {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 0 6px rgba(106, 27, 154, 0.4);
+}
+
+button:hover {
+    background-color: #4a148c;
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(138, 43, 226, 0.6),
+                0 0 20px rgba(138, 43, 226, 0.4);
+}
+
+button:active {
+    transform: scale(0.97);
+    box-shadow: 0 0 8px rgba(106, 27, 154, 0.5);
+}

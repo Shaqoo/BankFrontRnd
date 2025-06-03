@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link rel="shortcut icon" href="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.35_c3be9d8a.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+      <div class="sidebar" id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="brand">
+            <img class="logo" src="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.36_59ccea3c.jpg" alt="">
+        <h3 class="sidebar-text">BankNest</h3>
+        </div>
+        <nav class="menu">
+          <a href="http://127.0.0.1:5500/Customer/dashboard.html"><i class="fas fa-home"></i><span class="sidebar-text"> Home</span></a>
+          <a href="http://127.0.0.1:5500/Customer/account.html"><i class="fas fa-university"></i><span class="sidebar-text"> Accounts</span></a>
+          <a href="http://127.0.0.1:5500/Customer/transaction.html"><i class="fas fa-exchange-alt"></i><span class="sidebar-text"> Transactions</span></a>
+          <a href="http://127.0.0.1:5500/Customer/loan.html"><i class="fas fa-hand-holding-usd"></i><span class="sidebar-text"> Loans</span></a>
+          <a href="http://127.0.0.1:5500/Customer/moification.html"><i class="fas fa-bell"></i><span class="sidebar-text"> Notifications</span></a>
+          <a href="http://127.0.0.1:5500/Customer/complaint.html"><i class="fas fa-comment-dots"></i><span class="sidebar-text"> Complaints</span></a>
+          <a href="http://127.0.0.1:5500/Customer/profile.html"><i class="fas fa-user-cog"></i><span class="sidebar-text"> Profile</span></a>
+          <a href="http://127.0.0.1:5500/Customer/help.html"><i class="fas fa-question-circle"></i><span class="sidebar-text"> Help</span></a>
+          <a href="http://127.0.0.1:5500/SignIn.html"><i class="fas fa-sign-out-alt"></i><span class="sidebar-text"> Logout</span></a>
+        </nav>
+        <br>
+        <div class="user-info">
+            <!-- <img class="avatar" src="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.36_59ccea3c.jpg" alt="">
+            <span class="sidebar-text">BankNest</span> -->
+        </div>
+      </div>
+      <div class="main-content">  
+         <div id="content1"> 
+          <h3>WELCOME TO DASHBOARD</h3>
+          <div id="message">
+            <!-- <div id="login"><h4>Welcome </h4>
+                <h4>Last Logged In</h4></div>
+            <div id="account">
+                <h4>AccountBalance</h4>
+                 <h2>$12,000</h2>
+            </div> -->
+         </div>
+        <div class="chart-container">
+            <canvas id="spendingChart"></canvas>
+          </div> 
+        <div id="things">   
+          <div id="transaction" onclick="window.location.href='http://127.0.0.1:5500/Customer/transaction.html'">
+             <h3>Start A Transaction</h3>
+          </div>  
+          <div id="accountDetails" onclick="window.location.href='http://127.0.0.1:5500/Customer/profile.html'">
+            <h3>Check Details</h3>
+          </div>  
+        </div>
+        <footer>
+            <div class="footer-info">
+              <p>© 2025 BankNest. All rights reserved.</p>
+              <a href="#">Privacy Policy</a> | <a href="#">Terms</a>
+            </div>
+          </footer>
+    </div>
+        <div id="content2">
+          <div class="search-toggle-wrapper">
+            <input type="text" id="searchInput" placeholder="Search..." />
+            <button onclick="searchDashboard()" class="search-btn"><i class="fas fa-search"></i></button>
+            
+            
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+              <span class="slider round"></span>
+            </label>
+             
+            <a href="http://127.0.0.1:5500/Customer/moification.html" class="notification">
+              <i class="bell-icon"></i>
+              <span class="badge" id="notif-badge"></span>
+            </a>
+          </div>
+  
+                
+              <div id="transaction2">
+                 <ul id="lists">
+                   <h4>Recent Transactions      <button type="button" onclick="window.location.href='http://127.0.0.1:5500/Customer/transaction.html'">View All >></button></h4>
+                   
+                 </ul>
+              </div>
+              <div class="chart-and-loan-container">
+                
+                <div class="circle-container">
+                    <svg class="donut" width="150" height="150" viewBox="0 0 42 42">
+                        <circle class="bg" cx="21" cy="21" r="15.9155" />
+                        <circle id="debitSlice" class="debit" cx="21" cy="21" r="15.9155" />
+                    </svg>
+                    <div class="center-label">May</div>
+                </div>
+               
+                <a href="http://127.0.0.1:5500/Customer/loan.html" class="loan-offer">
+                    <div class="loan-content">
+                        <h3>Special Loan Offer</h3>
+                        <p>Get up to ₦5,000,000 at just 5% interest!</p>
+                    </div>
+               </a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+     <script src="dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Email Verification</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f2f5;
+    }
+
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    input {
+      margin: 0.5rem 0;
+      padding: 0.6rem;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      background-color: #5a0ba0;
+      color: white;
+      padding: 0.6rem;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .message {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .success { color: green; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Email Verification</h2>
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <input type="text" id="token" placeholder="Enter verification code" required />
+    <button onclick="verifyToken()">Verify</button>
+    <div class="message" id="message"></div>
+  </div>
+
+  <script>
+    async function verifyToken() {
+      const email = document.getElementById("email").value;
+      const token = document.getElementById("token").value;
+      const message = document.getElementById("message");
+
+      if (!email || !token) {
+        message.textContent = "Email and token are required.";
+        message.className = "message error";
+        return;
+      }
+
+      try {
+        const res = await fetch(`https://localhost:7246/api/User/verify-email?email=${encodeURIComponent(email)}&token=${encodeURIComponent(token)}`);
+
+        const data = await res.json();
+        if (res.ok) {
+          message.textContent = data.message;
+          message.className = "message success";
+          window.location.href = "SignIn.html"
+        } else {
+          message.textContent = data.message || "Verification failed.";
+          message.className = "message error";
+        }
+      } catch (err) {
+        message.textContent = "Network error.";
+        message.className = "message error";
+      }
+    }
+  </script>
+</body>
+</html>

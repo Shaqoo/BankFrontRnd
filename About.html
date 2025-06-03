@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About BankNest</title>
+  <link rel="icon" type="image/png" href="WhatsApp Image 2025-05-01 at 20.43.35_c3be9d8a.jpg" />
+   <link rel="stylesheet" href="About.css">
+</head>
+<body>
+    <div class="button-group"><button type="button" onclick="GoBack()">Go Back To Previous Page</button>
+      <button type="button" onclick="toggleDarkMode()" id="darkModeBtn">Enable Dark Mode</button>
+    </div>
+  <div class="container">
+    <h1>About BankNest</h1>
+    <p><span class="label">Version:</span> 1.0</p>
+    <p><span class="label">Purpose:</span> BankNest is a secure and user-friendly banking application designed to help you manage your accounts, view transactions, apply for loans, and stay in control of your finances with ease.</p>
+    <p><span class="label">Developer:</span> Shakirullah</p>
+    <div class="contact">
+      <p><span class="label">Contact:</span> <a href="mailto:shakirullahohio@gmail.com">shakirullahohio@gmail.com</a></p>
+    </div>
+    <p style="margin-top: 30px;">&copy; 2025 BankNest. All rights reserved.</p>
+  </div>
+  <script>
+    function GoBack()
+    {
+        window.location.href = "landingPage.html"
+    }
+    function toggleDarkMode() {
+      const body = document.body;
+      body.classList.toggle("dark-mode");
+      
+      const btn = document.getElementById("darkModeBtn");
+      if (body.classList.contains("dark-mode")) {
+          btn.textContent = "Disable Dark Mode";
+      } else {
+          btn.textContent = "Enable Dark Mode";
+      }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BankNest - Sign In</title>
+    <link rel="shortcut icon" href="BankNestFavicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="SignIn.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <div id="container">
+        <form action="SignIn" method="post" id="form">
+            <img src="WhatsApp Image 2025-05-01 at 20.43.35_c3be9d8a.jpg" alt="BankNest Logo">
+            <h4>Email or Username</h4>
+            <input type="text" id="input" placeholder="Enter Email or Username" required>
+            <h4>Password</h4>
+            <input type="password" id="password" placeholder="Enter Password" required minlength="8">
+            <button type="submit" id="submit">Sign In</button>
+            <div class="auth-links">
+                <a href="ResetPassword.html" style="margin-right: 10px;">Forgot password?</a>
+                <br />
+                <span>Don't have an account? <a href="SignUp.html">Sign up</a></span>
+            </div>
+            <div id="twoFactorSection">
+                <h4>Enter 2FA Code</h4>
+                <input type="text" id="twoFactorCode" placeholder="6-digit code" />
+                <button type="button" id="verifyCodeBtn">Verify Code</button>
+            </div>
+        </form>
+    </div>
+    <script src="SignIn.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="shortcut icon" href="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.35_c3be9d8a.jpg"
+        type="image/x-icon">
+    <link rel="stylesheet" href="settings.css">
+</head>
+
+<body>
+
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <h2 class="sidebar-text">Account Officer</h2>
+        <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> <span class="sidebar-text">Dashboard</span></a>
+        <a href="account.html"><i class="fas fa-users"></i><span class="sidebar-text"> Manage Users</span></a>
+        <a href="transaction.html"><i class="fas fa-file-invoice-dollar"></i><span class="sidebar-text">
+                Transactions</span></a>
+        <a href="complaints.html"><i class="fas fa-comments"></i><span class="sidebar-text">Complaints</span></a>
+        <a href="loans.html"><i class="fas fa-chart-line"></i><span class="sidebar-text"> Loans</span></a>
+        <a href="settings.html"><i class="fas fa-cogs"></i><span class="sidebar-text">Settings</span></a>
+        <a href="http://127.0.0.1:5500/SignIn.html"><i class="fas fa-sign-out-alt"></i><span
+                class="sidebar-text">Logout</span></a>
+    </div>
+
+    <div id="main-content">
+        <div class="settings-container">
+
+            <h2>Admin Settings</h2>
+            <section>
+                <h3>Update Profile</h3>
+                <input type="text" placeholder="Full Name" id="admin-name">
+                <input type="email" placeholder="Email" id="admin-email">
+                <input type="tel" placeholder="Phone" id="admin-phone">
+                <button onclick="updateAdminDetails()">Update Profile</button>
+            </section>
+            <section>
+                <h3>Change Password</h3>
+                <a href="http://127.0.0.1:5500/ResetPassword.html"><button type="button">Reset Password</button></a>
+
+            </section>
+            <section>
+                <h3>Two-Factor Authentication</h3>
+                <label>
+                    <button type="checkbox" id="enable-2fa" onclick="toggle2FA()"> Enable 2FA</button>
+            </section>
+
+            <section>
+                <h3>All Notifications</h3>
+                <button onclick="getAllNotifications()">View Notifications</button>
+                <button onclick="markAllAsRead()">Mark All as Read</button>
+                <ul id="notifications-list" style="margin-top: 14px; list-style: none; padding-left: 0;"></ul>
+            </section>
+
+        </div>
+
+    </div>
+    <script src="settings.js"></script>
+</body>
+
+</html>

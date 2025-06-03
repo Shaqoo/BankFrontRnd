@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Help - BankNest</title>
+  <link rel="shortcut icon" href="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.35_c3be9d8a.jpg"
+    type="image/x-icon">
+  <link rel="stylesheet" href="complaint.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"/>
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="sidebar" id="sidebar">
+      <div class="toggle-btn" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="brand">
+        <img class="logo" src="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.36_59ccea3c.jpg" alt="">
+        <h3 class="sidebar-text">BankNest</h3>
+      </div>
+      <nav class="menu">
+        <a href="http://127.0.0.1:5500/Customer/dashboard.html"><i class="fas fa-home"></i><span class="sidebar-text">
+            Home</span></a>
+        <a href="http://127.0.0.1:5500/Customer/account.html"><i class="fas fa-university"></i><span
+            class="sidebar-text"> Accounts</span></a>
+        <a href="http://127.0.0.1:5500/Customer/transaction.html"><i class="fas fa-exchange-alt"></i><span
+            class="sidebar-text"> Transactions</span></a>
+        <a href="http://127.0.0.1:5500/Customer/loan.html"><i class="fas fa-hand-holding-usd"></i><span
+            class="sidebar-text"> Loans</span></a>
+        <a href="http://127.0.0.1:5500/Customer/moification.html"><i class="fas fa-bell"></i><span class="sidebar-text">
+            Notifications</span></a>
+        <a href="http://127.0.0.1:5500/Customer/complaint.html"><i class="fas fa-comment-dots"></i><span
+            class="sidebar-text"> Complaints</span></a>
+        <a href="http://127.0.0.1:5500/Customer/profile.html"><i class="fas fa-user-cog"></i><span class="sidebar-text">
+            Profile</span></a>
+        <a href="http://127.0.0.1:5500/Customer/help.html"><i class="fas fa-question-circle"></i><span
+            class="sidebar-text"> Help</span></a>
+        <a href="http://127.0.0.1:5500/SignIn.html"><i class="fas fa-sign-out-alt"></i><span class="sidebar-text">
+            Logout</span></a>
+      </nav>
+      <br>
+      <div class="user-info">
+
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="complaint-section">
+        <div class="chat-wrapper">
+          <div class="complaint-list" id="complaintList"></div>
+          <div class="chat-box" id="chatBox">
+            <div class="chat-messages" id="chatMessages"></div>
+            <form id="chatForm" class="chat-form" style="display: none;">
+              <input type="text" id="chatInput" placeholder="Type your message..." required />
+              <button type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+
+
+        <form id="complaintForm" class="complaint-form">
+          <h2>Choose Your Complaint Title</h2>
+          <select  id="title">
+            <option value="Account & Balance Issues">Account & Balance Issues</option>
+            <option value="Failed or Delayed Transactions">Failed or Delayed Transactions</option>
+            <option value="Login & Access Problems">Login & Access Problems</option>
+            <option value="Loan & EMI Complaints">Loan & EMI Complaints</option>
+            <option value="Statement & Transaction History Errors">Statement & Transaction History Errors</option>
+            <option value="Customer Support Experience">Customer Support Experience</option>
+            <option value="Fraud & Security Concerns">Fraud & Security Concerns</option>
+            <option value="App Errors">App Errors</option>
+            <option value="Mobile Number or Email Not Updating">Mobile Number or Email Not Updating</option>
+            <option value="Unable to Update Personal Information">Unable to Update Personal Information</option>
+            <option value="Service Request Not Completed">Service Request Not Completed</option>
+            <option value="Other / Not Listed Above">Other / Not Listed Above</option>
+          </select>
+          <textarea id="complaintText" placeholder="Type your complaint..." required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <script src="complaint.js"></script>
+</body>
+
+</html>

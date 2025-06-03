@@ -1,0 +1,78 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+img {
+  width: 60px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+}
+
+h4 {
+  margin: 10px 0 5px;
+  color: #333;
+  font-weight: normal;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #0d0d0d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #333;
+}
+ #twoFactorSection {
+      margin-top: 20px;
+      display: none;
+    }
+    .auth-links {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.auth-links a {
+  color: #007bff;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.2s ease;
+}
+
+.auth-links a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}

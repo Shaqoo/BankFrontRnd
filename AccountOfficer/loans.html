@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Loans</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="shortcut icon" href="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.35_c3be9d8a.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="loans.css">
+</head>
+<body>
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <h2 class="sidebar-text">Account Officer</h2>
+        <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i> <span class="sidebar-text">Dashboard</span></a>
+        <a href="account.html"><i class="fas fa-users"></i><span class="sidebar-text"> Manage Users</span></a>
+        <a href="transaction.html"><i class="fas fa-file-invoice-dollar"></i><span class="sidebar-text"> Transactions</span></a>
+        <a href="complaints.html"><i class="fas fa-comments"></i><span class="sidebar-text">Complaints</span></a>
+        <a href="loans.html"><i class="fas fa-chart-line"></i><span class="sidebar-text"> Loans</span></a>
+        <a href="settings.html"><i class="fas fa-cogs"></i><span class="sidebar-text">Settings</span></a>
+        <a href="http://127.0.0.1:5500/SignIn.html"><i class="fas fa-sign-out-alt"></i><span class="sidebar-text">Logout</span></a>
+    </div>
+
+    <div id="main-content">
+        <h2>Loan Officer Dashboard</h2>
+
+        <div class="section">
+            <h3>View Pending Loans</h3>
+            <button onclick="fetchPendingLoans()">Get Pending Loans</button>
+            <div id="pendingLoans"></div>
+        </div>
+
+      
+
+        <div class="section">
+            <h3>View Rejected Loans</h3>
+            <button onclick="fetchRejectedLoans()">Get Rejected Loans</button>
+            <div id="rejectedLoans"></div>
+        </div>
+
+        <div class="section">
+            <h3>Approved Loans (Click to View Repayments)</h3>
+            <button onclick="fetchApprovedLoans()">Get Approved Loans</button>
+            <div id="approvedLoans"></div>
+            <div id="loanRepayments"></div>
+        </div>
+    </div>
+
+    <script src="loans.js"></script>
+</body>
+</html>

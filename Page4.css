@@ -1,0 +1,123 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #F0F4F8; 
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .logo {
+    width: 120px;
+    margin-bottom: 10px;
+    margin-top: 90px;
+  }
+  
+  #signupbox4 {
+    background-color: #FFFFFF;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    width: 360px;
+    text-align: center;
+  }
+  
+  #signup-box h4 {
+    color: #2C3E50;
+    font-size: 24px;
+  }
+  
+  input{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D6E4F0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #F8FBFF;
+  }
+  select{
+     color:  #2C3E50;
+     width: 100%;
+     height: 5vh;
+  }
+  .custom-select {
+    width: 250px;
+    position: relative;
+    font-family: sans-serif;
+    margin-left: 70px;
+  }
+  
+  .selected-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .selected-option img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+  }
+  
+  .options {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 1000;
+  }
+  
+  .options .option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .options .option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .options img {
+    width: 30px;
+    height: 30px;
+    border-radius:50%;
+  }
+  button {
+    background-color: #2C3E50;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: black;
+  }
+
+   
+  

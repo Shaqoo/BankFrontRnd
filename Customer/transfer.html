@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deposit & Transfer - BankNest</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="BankNestFavicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+  <h1>Deposit and Transfer</h1>
+  <div class="form-container">
+   
+    <div class="card" id="deposit">
+      <h2>Deposit</h2>
+      <input type="number" id="depositAmount" placeholder="Amount" min="50" required />
+      <button onclick="proceedToPin('deposit')">Submit Deposit</button><br>
+      <a href="#" onclick="showTransfer()">Transfer?</a>
+    </div>
+
+    
+    <div class="card" id="transfer">
+      <h2>Transfer</h2>
+      <input type="text" id="toAccount" placeholder="Recipient Account Number" required minlength="9"/>
+      <input type="number" id="transferAmount" placeholder="Amount" min="50"  required />
+      <input type="text" id="transferDescription" placeholder="Narration (optional)" />
+      <button onclick="proceedToPin('transfer')">Submit Transfer</button><br>
+      <a href="#" onclick="showDeposit()">Deposit?</a>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

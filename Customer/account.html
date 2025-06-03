@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Account - BankNest</title>
+  <link rel="shortcut icon" href="favicon.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="account.css">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="sidebar" id="sidebar">
+      <div class="toggle-btn" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="brand">
+        <img class="logo" src="http://127.0.0.1:5500/WhatsApp Image 2025-05-01 at 20.43.36_59ccea3c.jpg" alt="">
+        <h3 class="sidebar-text">BankNest</h3>
+      </div>
+      <nav class="menu">
+        <a href="dashboard.html" title="Go to Dashboard"><i class="fas fa-home"></i><span class="sidebar-text"> Home</span></a>
+        <a href="account.html" title="View your accounts"><i class="fas fa-university"></i><span class="sidebar-text"> Accounts</span></a>
+        <a href="transaction.html" title="View transactions"><i class="fas fa-exchange-alt"></i><span class="sidebar-text"> Transactions</span></a>
+        <a href="loan.html" title="Loan information"><i class="fas fa-hand-holding-usd"></i><span class="sidebar-text"> Loans</span></a>
+        <a href="moification.html" title="Notifications"><i class="fas fa-bell"></i><span class="sidebar-text"> Notifications</span></a>
+        <a href="complaint.html" title="Submit complaint"><i class="fas fa-comment-dots"></i><span class="sidebar-text"> Complaints</span></a>
+        <a href="profile.html" title="Your profile"><i class="fas fa-user-cog"></i><span class="sidebar-text"> Profile</span></a>
+        <a href="help.html" title="Help center"><i class="fas fa-question-circle"></i><span class="sidebar-text"> Help</span></a>
+        <a href="SignIn.html" title="Logout"><i class="fas fa-sign-out-alt"></i><span class="sidebar-text"> Logout</span></a>
+      </nav>
+      <br>
+      <div class="user-info">
+         
+      </div>
+    </div>
+
+    <div class="main-content">
+      <h2>Account Details</h2>
+
+      <div class="search-box">
+        <!-- <input type="text" id="accountSearch" placeholder="Enter Account Number" title="Search by account number">
+        <button onclick="searchAccount()">Search</button> -->
+      </div>
+
+      <div id="loader" class="loader" style="display: none;"></div>
+
+      <div class="account-info" id="account-info">
+        <!-- <div class="info-row"><strong>Account Holder:</strong> <span id="acc-holder">John Doe</span></div>
+        <div class="info-row"><strong>Account Number:</strong> <span id="acc-number">1234567890</span></div>
+        <div class="info-row"><strong>Account Type:</strong> <span id="acc-type">Savings</span></div>
+        <div class="info-row"><strong>Bank Branch:</strong> <span id="acc-branch">Main City Branch</span></div>
+        <div class="info-row"><strong>Balance:</strong> <span id="acc-balance">$5,400.00</span></div>
+        <div class="info-row"><strong>Status:</strong> <span id="acc-status">Active</span></div> -->
+      </div>
+    </div>
+  </div>
+
+  <footer class="app-footer">
+    BankNest © <span id="year"></span> - All rights reserved.
+  </footer>
+
+  <script src="account.js"></script>
+</body>
+</html>
